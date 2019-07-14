@@ -1,0 +1,70 @@
+@import './compositions';
+
+.containerCookies {
+  position: fixed;
+  @include flex-end();
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  @media only screen and (max-width: 1280px) {
+    justify-content: center;
+    align-items: center;
+  }
+  > .content {
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 0.2em;
+    display: block;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    width: 30%;
+    height: auto;
+    @media only screen and (max-width: 1280px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 70%;
+      font-size: 0.75em;
+    }
+    >.cancel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 1em;
+      cursor: pointer;
+    }
+    > .title {
+      font-size: 1.8em;
+      padding: 1em;
+      @media only screen and (max-width: 1280px) {
+        font-size: 1.6em;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 1.3em;
+      }
+    }
+    > .body {
+      padding: 0 1em;
+    }
+    > .buttonContainer{
+      @include flex-center();
+      padding: 1em 0;
+      >.button {
+        margin: 1em 2em;
+      }
+    }
+
+  }
+}
+.href{
+  text-decoration: none;
+  color: black;
+}
+
+.href:hover {
+  color: gold;
+}

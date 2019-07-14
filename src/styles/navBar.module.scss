@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./compositions";
+
+.navBar {
+  background: $black;
+  @include flex-center();
+  color: white;
+}
+
+.logoContainer {
+  margin: auto auto auto 5em;
+  @include flex-center();
+  align-items: flex-start;
+  @media only screen and (max-width: 1280px) {
+    margin: auto auto auto 3em;
+  }
+  @media only screen and (max-width: 700px) {
+    margin: auto;
+  }
+  > .logo {
+    align-self: center;
+    width: 6em;
+    @media only screen and (max-width: 1280px) {
+      width: 4em;
+    }
+  }
+  > .title {
+    font-size: 1.5em;
+    margin: auto;
+    width: 10em;
+    @include flex-direction(column);
+    @media only screen and (max-width: 1280px) {
+      font-size: 1.2em;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
+    }
+    > .upperPart {
+      @include flex-start();
+    }
+    > >.lowerPart {
+      @include flex-end();
+    }
+  }
+  > .titleShort {
+    align-self: center;
+    font-size: 1.5em;
+    margin: auto;
+    width: 5em;
+    @include flex-direction(column);
+    @media only screen and (max-width: 1280px) {
+      font-size: 1.2em;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 1em;
+    }
+    > .upperPart {
+      @include flex-start();
+    }
+    > >.lowerPart {
+      @include flex-end();
+    }
+  }
+}
+
+.switchContainer {
+  @include flex-center();
+  margin: auto 3em auto auto;
+  @media only screen and (max-width: 1280px) {
+    margin-right: 2em;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-right: 1em;
+  }
+}
+
+.uncheckedSwitch {
+  width: 1.8em;
+}
+
+.checkedSwitch {
+  @extend .uncheckedSwitch;
+  margin-left: 0.8em;
+}
+
+.hide {
+  display: block;
+  @media only screen and (max-width: 700px) {
+    display: none !important;
+  }
+}
