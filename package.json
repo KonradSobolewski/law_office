@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.10",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.1",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
-    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@types/react-slick": "^0.23.4",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
@@ -17,7 +18,9 @@
     "react-dom": "^16.8.6",
     "react-responsive-modal": "^4.0.1",
     "react-scripts": "3.0.1",
+    "react-slick": "^0.24.0",
     "react-switch": "^5.0.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "3.5.3"
   },
   "scripts": {

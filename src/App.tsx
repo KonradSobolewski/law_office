@@ -7,6 +7,7 @@ import {amber} from '@material-ui/core/colors'
 import TextService from './config/textService'
 import { CookiesProvider, useCookies } from 'react-cookie';
 import Cookies from './components/cookies';
+import SliderShow from './components/slider'
 
 let textConfig = require('./config/text');
 
@@ -73,6 +74,7 @@ const App: React.FC = () => {
                     {showCookies ? <Cookies close={close} accept={accept}/> : null}
                     <div className="App">
                         <NavBar/>
+                        <SliderShow/>
                         <header className="App-header">
                             <img src={logo} className="App-logo" alt="logo"/>
                             <p>test

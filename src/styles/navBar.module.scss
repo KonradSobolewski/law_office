@@ -1,12 +1,6 @@
 @import "./variables";
 @import "./compositions";
 
-.navBar {
-  background: $black;
-  @include flex-center();
-  color: white;
-}
-
 .logoContainer {
   margin: auto auto auto 5em;
   @include flex-center();
@@ -19,8 +13,11 @@
   }
   > .logo {
     align-self: center;
-    width: 6em;
+    width: 7em;
     @media only screen and (max-width: 1280px) {
+      width: 5em;
+    }
+    @media only screen and (max-width: 700px) {
       width: 4em;
     }
   }

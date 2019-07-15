@@ -1,0 +1,59 @@
+@import "compositions";
+@import "variables";
+
+.sliderContainer {
+  margin: auto;
+  padding: 2em;
+  background: $black;
+  color: white;
+  width: 70%;
+}
+.arrow {
+  margin-top: -1em;
+}
+.sliderImage {
+  width: 30%;
+  height: 40em;
+}
+
+.slideItemContainer {
+  @include flex-center();
+  margin: auto;
+  width: 90%;
+  position: relative;
+  padding-bottom: 1em;
+  > .slideImage {
+    width: 30em;
+  }
+  > .slideTextContainer{
+    padding: 2em;
+   >.slideTitle{
+     color: gold;
+     text-shadow: 0 0 5px rgba(255,255,255, 0.4), 0 0 20px rgba(255, 250, 144, 0.4);
+   }
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 12em;
+}
+.leftArrow {
+  @extend .arrow;
+  left: 4em;
+}
+
+.rightArrow {
+  @extend .arrow;
+  right: 4em;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color:white!important;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: white !important;
+}

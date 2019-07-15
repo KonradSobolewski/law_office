@@ -14,7 +14,6 @@ const NavBar: React.FC = () => {
     const {switchState, tab, setSwitch, setNavBarTab} = useContext(LawContext);
 
     return (
-        <div className={'navBar'}>
             <AppBar position="sticky" color="secondary">
                 <Tabs
                     value={tab}
@@ -52,7 +51,6 @@ const NavBar: React.FC = () => {
                     </div>
                 </Tabs>
             </AppBar>
-        </div>
     )
 };
 
