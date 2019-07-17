@@ -9,9 +9,11 @@
   width: 70%;
   @media only screen and (max-width: 1280px) {
     width: 80%;
+    padding: 1em 1em 2em;
   }
   @media only screen and (max-width: 600px) {
     width: 85%;
+    padding: 0 0 2em;
   }
 }
 
