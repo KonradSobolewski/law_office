@@ -8,6 +8,7 @@ import TextService from './config/textService'
 import { CookiesProvider, useCookies } from 'react-cookie';
 import Cookies from './components/cookies';
 import SliderShow from './components/slider'
+import { ScrollTo } from "react-scroll-to";
 
 let textConfig = require('./config/text');
 
@@ -15,7 +16,7 @@ export const LawContext = React.createContext({
     switchState: true,
     tab: 1,
     setSwitch: (value: boolean) => {},
-    setNavBarTab: (value: number) => {}
+    setNavBarTab: (value: number, scrollTo: () => {}) => {}
 });
 
 const theme = createMuiTheme({
@@ -54,8 +55,20 @@ const App: React.FC = () => {
         }
     };
 
-    const setNavBarTab = (value: number) => {
-        setTab(value)
+    const setNavBarTab = (value: number, scrollTo: ({}) => {}) => {
+        let height;
+        switch (value) {
+            case 1:
+                height = 0;
+                break;
+            case 2:
+                height = 1000;
+                break;
+            default:
+                height = 0;
+        }
+        scrollTo({x: 0, y: height, smooth: true});
+        setTab(value);
     };
 
     const accept = () => {
@@ -73,7 +86,9 @@ const App: React.FC = () => {
                 <LawContext.Provider value={{switchState, tab, setSwitch, setNavBarTab}}>
                     {showCookies ? <Cookies close={close} accept={accept}/> : null}
                     <div className="App">
-                        <NavBar/>
+                        <ScrollTo>
+                            {({scrollTo}) => <NavBar scroll={scrollTo}/>}
+                        </ScrollTo>
                         <SliderShow/>
                         <header className="App-header">
                             <img src={logo} className="App-logo" alt="logo"/>

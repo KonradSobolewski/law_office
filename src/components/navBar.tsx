@@ -10,14 +10,14 @@ import POLAND from "../assets/images/poland.svg";
 import ENG from "../assets/images/eng.svg";
 import logo from "../logo.svg";
 
-const NavBar: React.FC = () => {
+const NavBar = (props: any) => {
     const {switchState, tab, setSwitch, setNavBarTab} = useContext(LawContext);
 
     return (
             <AppBar position="sticky" color="secondary">
                 <Tabs
                     value={tab}
-                    onChange={(event, value) => setNavBarTab(value)}
+                    onChange={(event, value) => setNavBarTab(value, props.scroll)}
                     indicatorColor="primary"
                     textColor="primary"
                     centered={true}

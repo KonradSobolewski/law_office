@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavigateBefore, NavigateNext} from '@material-ui/icons'
-import "react-alice-carousel/lib/alice-carousel.css";
 import '../styles/main.scss'
 import Person1 from '../assets/images/person1.jpg'
 import Person2 from '../assets/images/person2.jpg'
