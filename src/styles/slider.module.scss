@@ -14,13 +14,6 @@
     width: 85%;
   }
 }
-.arrow {
-  margin-top: -1em;
-}
-.sliderImage {
-  width: 30%;
-  height: 40em;
-}
 
 .slideItemContainer {
   @include flex-center();
@@ -65,6 +58,7 @@
   cursor: pointer;
   position: absolute;
   top: 12em;
+  margin-top: -1em;
   @media only screen and (max-width: 1280px) {
     top: 9em;
   }
