@@ -7,6 +7,12 @@
   background: $black;
   color: white;
   width: 70%;
+  @media only screen and (max-width: 1280px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+  }
 }
 .arrow {
   margin-top: -1em;
@@ -22,11 +28,32 @@
   width: 90%;
   position: relative;
   padding-bottom: 1em;
+  @media only screen and (max-width: 600px) {
+    padding-bottom: 0;
+  }
   > .slideImage {
     width: 30em;
+    @media only screen and (max-width: 1280px) {
+      width: 20em;
+    }
+    @media only screen and (max-width: 600px) {
+      width: 13em;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 9em;
+    }
   }
   > .slideTextContainer{
     padding: 2em;
+    @media only screen and (max-width: 1280px) {
+      font-size: 0.8em;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 0.5em
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 0.3em;
+    }
    >.slideTitle{
      color: gold;
      text-shadow: 0 0 5px rgba(255,255,255, 0.4), 0 0 20px rgba(255, 250, 144, 0.4);
@@ -38,15 +65,48 @@
   cursor: pointer;
   position: absolute;
   top: 12em;
+  @media only screen and (max-width: 1280px) {
+    top: 9em;
+  }
+  @media only screen and (max-width: 600px) {
+    top: 6.5em;
+  }
+  @media only screen and (max-width: 400px) {
+    top: 5.5em;
+  }
 }
 .leftArrow {
   @extend .arrow;
   left: 4em;
+  @media only screen and (max-width: 1280px) {
+    left: 2em;
+  }
+  @media only screen and (max-width: 800px) {
+    left: 1em;
+  }
+  @media only screen and (max-width: 600px) {
+    left: 0.35em;
+  }
+  @media only screen and (max-width: 400px) {
+    left: 0.1em;
+  }
 }
 
 .rightArrow {
   @extend .arrow;
   right: 4em;
+  @media only screen and (max-width: 1280px) {
+    right: 2em;
+  }
+  @media only screen and (max-width: 800px) {
+    right: 1em;
+  }
+  @media only screen and (max-width: 600px) {
+    right: 0.35em;
+  }
+  @media only screen and (max-width: 400px) {
+    right: 0.1em;
+  }
 }
 
 .slick-dots li button:before {
